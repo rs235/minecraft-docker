@@ -10,6 +10,7 @@ JAVA_MIN_MEMORY=4G
 JAVA_MAX_MEMORY=4G
 SERVER_JAR=/opt/minecraft/server.jar
 ```
+[Docker Hub repo](https://hub.docker.com/r/rs235/minecraft)
 
 ### Building
 

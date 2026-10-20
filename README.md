@@ -4,10 +4,12 @@
 2. Sets EULA based on provided environmental variable.
 3. Bind mounts local directory for easy access to your Minecraft worlds. Can be replaced with a named volume if no easy access is required.
 4. Starts server with `-Xmx4G -Xms4G -jar server.jar nogui` java parameters. Those can be adjusted with the following environmental variables:
-`EULA=TRUE
+```
+EULA=TRUE
 JAVA_MIN_MEMORY=4G
 JAVA_MAX_MEMORY=4G
-SERVER_JAR=/opt/minecraft/server.jar`
+SERVER_JAR=/opt/minecraft/server.jar
+```
 
 ### Building
 

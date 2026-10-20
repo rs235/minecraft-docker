@@ -1,14 +1,14 @@
 ## Minecraft Java Edition in Docker
 
-1. Downloads server jar file automatically.
-2. Sets EULA based on provided environmental variable.
-3. Bind mounts local directory for easy access to your Minecraft worlds. Can be replaced with a named volume if no easy access is required.
-4. Starts server with `-Xmx4G -Xms4G -jar server.jar nogui` java parameters. Those can be adjusted with the following environmental variables:
+1. Downloads specified server jar file automatically.
+2. Sets EULA based on user choice with environmental variable.
+3. Bind mounts local directory for easy access to your Minecraft worlds.
+4. Exposes RCON port to localhost but does not enable RCON by default.
+5. Is configurable with environmental variables but also starts with predefined `-Xmx4G -Xms4G -jar server.jar nogui` java parameters if the following env vars are not set:
 ```
-EULA=TRUE
 JAVA_MIN_MEMORY=4G
 JAVA_MAX_MEMORY=4G
-SERVER_JAR=/opt/minecraft/server.jar
+SERVER_JAR=server.jar
 ```
 [Docker Hub repo](https://hub.docker.com/r/rs235/minecraft)
 
@@ -67,7 +67,3 @@ SERVER_JAR=minecraft_server.26.3.jar
 ``` bash
 docker compose up
 ```
-
-
-### To do: 
-1. 

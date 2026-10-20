@@ -1,12 +1,17 @@
-name: Docker Image CI
+name: Docker Image Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+    paths:
+      - "Dockerfile"
+      - "start.sh"
+      - ".dockerignore"
 
 jobs:
 
-  build-image:
+  docker-image-build:
   
     runs-on: ubuntu-26.04
 

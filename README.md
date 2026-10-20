@@ -40,11 +40,18 @@ Docker Compose depends on a local .env file to:
  - Accept EULA
  - Select an image
  - Set bind mount directory for server data
+ - Receive additional server configuration
 
 ##### .env file template:
 ```
 MINECRAFT_DATA=/home/user/Minecraft/data
 MINECRAFT_IMAGE=image:tag
+MINECRAFT_DATA=/home/user/Minecraft/data
+MINECRAFT_IMAGE=image:tag
+EULA=TRUE
+JAVA_MIN_MEMORY=4G
+JAVA_MAX_MEMORY=4G
+SERVER_JAR=/opt/minecraft/server.jar
 ```
 
 ##### Start your server with a standard
